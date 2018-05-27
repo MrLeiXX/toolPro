@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Regular,Helvetica Neue,Microsoft Yahei,微软雅黑;
+}
+
+.navigation {
+    position: fixed;
+    width: 200px;
+    text-align: center;
+    padding: 0 20px;
+    background: #30333c;
+    height: 100%;
+    color: #fff;
+}
+
+.navTitle {
+    font-size: 18px;
+    line-height: 56px;
+    border-bottom: 1px solid #6b7386;
+}
+.navTitle img {
+    width: 18px;
+    height: 18px;
+    padding-right: 15px;
+}
+
+.navList .nav-a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #6b7386;
+}
+
+.navList .nav-a:hover {
+    color: #fff;
+}
+
+.navFoot {
+    width: 200px;
+    font-size: 14px;
+    line-height: 30px;
+    border-top: 1px solid #6b7386;
+    position: absolute;
+    bottom: 0;
+}
