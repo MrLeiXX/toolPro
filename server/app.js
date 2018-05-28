@@ -33,7 +33,10 @@ app.use(session({
     })
 }));
 
-// 访问需要账号密码权限
+//引入路由接口
+var loginFunction = require('./router/login.js');
+
+//权限控制
 app.get('/', function (req, res) {
     if (!req.session.user) {
         res.render('user');
@@ -41,6 +44,15 @@ app.get('/', function (req, res) {
     else {
         res.render('index');
     }
+});
+
+//登陆操作
+app.post('/tool/userlogin', loginFunction);
+
+//注销操作
+app.get('/tool/userexit', function (req, res) {
+    delete req.session.user;
+    res.redirect('/');
 });
 
 app.listen('7777');

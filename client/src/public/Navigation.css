@@ -40,8 +40,16 @@ body {
 .navFoot {
     width: 200px;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 34px;
     border-top: 1px solid #6b7386;
     position: absolute;
     bottom: 0;
+}
+
+.navFoot img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
 }
