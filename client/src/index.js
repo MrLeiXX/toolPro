@@ -5,14 +5,14 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './component/App';
 import Iplocation from './component/Iplocation';
+import BlogManage from './component/BlogManage';
 
 const Root = () => (
     <Router>
         <div>
-            <Switch>
-                <Route path="/" component={App}/>
-                <Route path='/Iplocation' component={Iplocation} />
-            </Switch>
+            <Route path="/" component={App}/>
+            <Route path='/Iplocation' component={Iplocation}/>
+            <Route path='/BlogManage' component={BlogManage}/>
         </div>
     </Router>
 );

@@ -55,4 +55,8 @@ app.get('/tool/userexit', function (req, res) {
     res.redirect('/');
 });
 
+app.get('*', function (req, res) {
+    res.render('404');
+})
+
 app.listen('7777');

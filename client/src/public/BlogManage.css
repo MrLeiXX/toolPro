@@ -1,0 +1,11 @@
+.blogmanage {
+    margin-left: 240px;
+}
+
+.contentshow {
+    width: 80%;
+    min-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}

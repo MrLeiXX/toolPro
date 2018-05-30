@@ -47,6 +47,7 @@ class Land extends Component {
     render() {
         return (
             <div className="container">
+                <canvas id="canv"></canvas>
                 <div className="content">
                     <form ref="getValue">
                         <div>

@@ -8,10 +8,10 @@ class Navigation extends Component {
   render() {
     return (
       <div className="navigation">
-        <div className="navTitle"><img src={navlog} alt="" />导航列表</div>
+        <div className="navTitle"><img src={navlog} alt="" /><a href="/">导航列表</a></div>
         <div className="navList">
-          <NavLink to="/Iplocation" className="nav-a" activeStyle={{color: '#fff'}} >IP定位</NavLink>
-          <NavLink to="/Iplocation2" className="nav-a" activeStyle={{color: '#fff'}} >管理中心</NavLink>
+          <NavLink to="/Iplocation" className="nav-a" activeStyle={{color: '#fff'}} >定位查询</NavLink>
+          <NavLink to="/BlogManage" className="nav-a" activeStyle={{color: '#fff'}} >文章管理</NavLink>
         </div>
         <div className="navFoot">2018 © Leihechao<a href="/tool/userexit"><img src={exitlog} alt="注销" title="注销" /></a></div>
       </div>
