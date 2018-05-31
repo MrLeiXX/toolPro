@@ -2,10 +2,93 @@
     margin-left: 240px;
 }
 
-.contentshow {
+.contentupdate {
     width: 80%;
     min-width: 1000px;
     margin: 0 auto;
+    padding: 30px 0;
+}
+
+.content1, .content2 {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.content1, .submit{
     text-align: center;
-    padding-top: 20px;
+}
+
+.title {
+    width: 500px;
+    height: 25px;
+    margin-right: 30px;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.qnylink {
+    width: 120px;
+    height: 25px;
+    line-height: 25px;
+    padding-bottom: 3px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    background: gray;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ipalert {
+    font-size: 12px;
+    color: green;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.contleft, .contright {
+    display: inline-block;
+    width: 48%;
+    margin: 0 1%;
+}
+.contleft {
+    float: left;
+}
+
+.md, .re {
+    width: 100%;
+    min-width: 450px;
+    height: 888px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
+
+.submit {
+    width: 100%;
+    position: relative;
+}
+
+.button {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    padding-bottom: 3px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #00a4ff;
+    background: #00a4ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.alert {
+    color: green;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: -5px;
 }

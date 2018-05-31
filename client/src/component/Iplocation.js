@@ -17,19 +17,25 @@ class Iplocation extends Component {
     }
   }
   componentDidMount() {
-    //百度地图
+
+    //百度地图初始化
     var BMap = window.BMap;
     var map = new BMap.Map("allmap"); // 创建Map实例
     map.centerAndZoom(new BMap.Point(116.404,39.915),11);
 	  map.enableScrollWheelZoom(true);
   }
+
+  //IP地址state更新
   getIp = (e) => {
     this.setState({ip: e.target.value});
   }
+
+  //IP查询方法
   ipSearch = () => {
     this.setState({alert: "正在查询中..."});
     var self = this; 
     
+    //根据经纬度更新百度地图界面
     var updateMap = function(a, b) {
       var BMap = window.BMap;
       var map = new BMap.Map("allmap"); // 创建Map实例
@@ -52,6 +58,8 @@ class Iplocation extends Component {
             let data  = JSON.parse(xhr.responseText);
             if (data.msg == "success") {
                 self.setState({alert: "IP查询成功"});
+
+                //更新state的IP查询数据信息
                 let a = "", b="", c="";
                 if(data.xiuyi.address.formatted_address){
                   a = data.xiuyi.address.formatted_address;

@@ -34,7 +34,8 @@ app.use(session({
 }));
 
 //引入路由接口
-var loginFunction = require('./router/login.js');
+let loginFunction = require('./router/login.js');
+let uploadFunction = require('./router/uploadblog.js');
 
 //权限控制
 app.get('/', function (req, res) {
@@ -54,6 +55,9 @@ app.get('/tool/userexit', function (req, res) {
     delete req.session.user;
     res.redirect('/');
 });
+
+//文章上传操作
+app.post('/tool/blogupload', uploadFunction);
 
 app.get('*', function (req, res) {
     res.render('404');
