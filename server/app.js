@@ -36,6 +36,8 @@ app.use(session({
 //引入路由接口
 let loginFunction = require('./router/login.js');
 let uploadFunction = require('./router/uploadblog.js');
+let apiBlogallFunction = require('./router/apiAllblog.js');
+let apiBlogOneFunction = require('./router/apiOneblog.js');
 
 //权限控制
 app.get('/', function (req, res) {
@@ -59,8 +61,15 @@ app.get('/tool/userexit', function (req, res) {
 //文章上传操作
 app.post('/tool/blogupload', uploadFunction);
 
+//提供blog.lhccloud.cn文章获取接口
+//获取所有文章接口
+app.get('/tool/api/blogAll', apiBlogallFunction);
+//获取单个文章接口
+app.get('/tool/api/blogOne/:pageId', apiBlogOneFunction);
+
+//未匹配路径提供404页面
 app.get('*', function (req, res) {
     res.render('404');
-})
+});
 
 app.listen('7777');

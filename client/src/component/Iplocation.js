@@ -60,24 +60,50 @@ class Iplocation extends Component {
                 self.setState({alert: "IP查询成功"});
 
                 //更新state的IP查询数据信息
-                let a = "", b="", c="";
-                if(data.xiuyi.address.formatted_address){
-                  a = data.xiuyi.address.formatted_address;
+                let a = "", b="", c="", d="", e="";
+                try {
+                  if(data.xiuyi.address.formatted_address){
+                    a = data.xiuyi.address.formatted_address;
+                  }
+                } catch (error) {
+                  a = '...';
                 }
-                if(data.xiuyi.address.sematic_description){
-                  b = data.xiuyi.address.sematic_description;
+                
+                try {
+                  if(data.xiuyi.address.sematic_description){
+                    b = data.xiuyi.address.sematic_description;
+                  }
+                } catch (error) {
+                  b = '...';
                 }
-                if( a || b){
-                  c = a + " " + b;
-                }else{
-                  c = data.xiuyi.content.content.address || data.xiuyi.content.content;
+                
+                try {
+                  if( a || b){
+                    c = a + " " + b;
+                  }else{
+                    c = data.xiuyi.content.content.address ? data.xiuyi.content.content.address : (data.xiuyi.content || data.xiuyi.content.content);
+                  }
+                } catch (error) {
+                  c = '...';
+                }
+                
+                try {
+                  d = data.xiuyi.content.content.point ? data.xiuyi.content.content.point.x : '...';
+                } catch (error) {
+                  d = '...';
+                }
+
+                try {
+                  e = data.xiuyi.content.content.point ? data.xiuyi.content.content.point.y : '...';
+                } catch (error) {
+                  e = '...'
                 }
                 let getipmsg = {
-                  searchIp: data.xiuyi.ip,
-                  originIp: data.origin,
+                  searchIp: data.xiuyi.ip || "",
+                  originIp: data.origin || "",
                   addrMsg: c,
-                  pointX: data.xiuyi.content.content.point ? data.xiuyi.content.content.point.x : '...',
-                  pointY: data.xiuyi.content.content.point ? data.xiuyi.content.content.point.y : '...'
+                  pointX: d,
+                  pointY: e
                 }
                 updateMap(Number(getipmsg.pointX),Number(getipmsg.pointY));
                 self.setState({ipmsg: getipmsg});

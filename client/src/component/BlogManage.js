@@ -46,11 +46,11 @@ class BlogManage extends Component {
                     let data  = JSON.parse(xhr.responseText);
                     if (data.code == 0) {
                         self.setState({alert: data.msg});
-                        this.setState({index: 1});
+                        self.setState({index: 1});
                     }
                     if (data.code == 1) {
                         self.setState({alert: data.msg});
-                        this.setState({index: 1});
+                        self.setState({index: 1});
                     }
                 }
             };

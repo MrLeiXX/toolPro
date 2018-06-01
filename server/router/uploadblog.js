@@ -2,7 +2,7 @@ var blogCont = require("../model/mongodbUploadblog.js");
 
 module.exports = function(req, res){
 
-    if (!req.session.user) {
+    if (req.session.user) {
         let blogtitle = req.body.title;
         let blogcontent = req.body.content;
         let blogtime = new Date().toLocaleString();

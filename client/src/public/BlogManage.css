@@ -56,6 +56,11 @@
     float: left;
 }
 
+.contright img {
+    width: 400px;
+    height: 400px;
+}
+
 .md, .re {
     width: 100%;
     min-width: 450px;
