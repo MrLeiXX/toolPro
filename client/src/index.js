@@ -4,16 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 import App from './component/App';
-import Iplocation from './component/Iplocation';
-import BlogManage from './component/BlogManage';
 
 const Root = () => (
     <Router>
-        <div>
-            <Route path="/" component={App}/>
-            <Route path='/Iplocation' component={Iplocation}/>
-            <Route path='/BlogManage' component={BlogManage}/>
-        </div>
+        <Route path="/" component={App} />
     </Router>
 );
 ReactDOM.render(<Root />, document.getElementById('root'));

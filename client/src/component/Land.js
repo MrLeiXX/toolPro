@@ -46,23 +46,28 @@ class Land extends Component {
     }
     render() {
         return (
-            <div className="container">
-                <canvas id="canv"></canvas>
-                <div className="content">
-                    <form ref="getValue">
-                        <div>
-                            <input className="input" onChange={this.getName} required type="text" maxLength="10" name="userName" value={this.state.name} placeholder=" 账号" />
-                        </div>
-                        <div>
-                            <input className="input sp" onChange={this.getPwd} required type="password" maxLength="10" name="passWord" value={this.state.pwd} placeholder=" 密码" />
-                        </div>
-                        <div className="alert">
-                            <p>{this.state.alert}</p>
-                        </div>
-                        <div>
-                            <p className="submit" onClick={this.userLogin}>登陆</p>
-                        </div>
-                    </form>
+            <div>
+                <div id="wrapper">
+                    <canvas id="canvas" width="1950px" height="800px"></canvas>
+                    <canvas id="canvasbg" width="1950px" height="800px"></canvas>
+                </div>
+                <div className="container">
+                    <div className="content">
+                        <form ref="getValue">
+                            <div>
+                                <input className="input" onChange={this.getName} required type="text" maxLength="10" name="userName" value={this.state.name} placeholder=" 账号" />
+                            </div>
+                            <div>
+                                <input className="input sp" onChange={this.getPwd} required type="password" maxLength="10" name="passWord" value={this.state.pwd} placeholder=" 密码" />
+                            </div>
+                            <div className="alert">
+                                <p>{this.state.alert}</p>
+                            </div>
+                            <div>
+                                <p className="submit" onClick={this.userLogin}>登陆</p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         );

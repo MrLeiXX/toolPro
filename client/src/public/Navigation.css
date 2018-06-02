@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: PingFangSC-Regular,Helvetica Neue,Microsoft Yahei,微软雅黑;
@@ -46,7 +46,7 @@ body {
 .navFoot {
     width: 200px;
     font-size: 14px;
-    line-height: 34px;
+    line-height: 50px;
     border-top: 1px solid #6b7386;
     position: absolute;
     bottom: 0;
