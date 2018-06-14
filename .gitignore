@@ -6,3 +6,6 @@
 # misc
 .DS_Store
 npm-debug.log*
+
+#secret
+/server/router/ipLocation.js

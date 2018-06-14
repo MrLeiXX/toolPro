@@ -7,7 +7,8 @@ var Schema = mongoose.Schema;
 var blogSchema = new Schema({
     title: String,
     createtime: String,
-    content: String
+    content: String,
+    pageid: String
 });
 
 var Toolblog = mongoose.model('Toolblog', blogSchema);

@@ -35,7 +35,7 @@ class Land extends Component {
                 if (data.code == 1) {
                     self.setState({alert: data.msg});
                     setTimeout(function(){
-                        window.location.href="http://localhost:7777";
+                        window.location.href="http://118.25.219.38/";
                     },1000);
                 }
             }
